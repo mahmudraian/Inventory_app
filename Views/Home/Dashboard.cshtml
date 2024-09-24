@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+<div class="row" style="margin-bottom:20px;" >
+    <div class="col col-4">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Total Member</h2>
+                <p class="card-text">1000</p>
+                
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col col-4">
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Total Member</h2>
+                <p class="card-text">1000</p>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col col-4">
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Total Member</h2>
+                <p class="card-text">1000</p>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col col-6">
+        @Html.Partial("~/Views/Shared/_EquipmentList.cshtml")
+    </div>
+    <div class="col col-6">
+        @Html.Partial("~/Views/Shared/_MemberList.cshtml")
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col col-6">
+        @Html.Partial("~/Views/Shared/_AssignedEquipmentLisT.cshtml")
+    </div>
+  
+</div>

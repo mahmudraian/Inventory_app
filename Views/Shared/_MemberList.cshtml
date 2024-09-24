@@ -1,0 +1,44 @@
+﻿@using Inventory_app.Models
+
+
+<div class="card border-dark mb-3">
+    <div class="card-header  text-center">
+        <strong>Header</strong>
+    </div>
+    <div class="card-body text-dark">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Role</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    List<Member> list = Member.MemberList();
+
+                    foreach (var item in list)
+                    {
+
+                        <tr>
+                            <th scope="row">@item.MemberId</th>
+                            <td>@item.MemberName</td>
+                            <td>@item.MemberRole</td>
+                            <td></td>
+                        </tr>
+                    }
+
+
+                }
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+

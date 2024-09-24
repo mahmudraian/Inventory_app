@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+
+@model Inventory_app.Models.Account
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>Login</title>
+    <script>
+        var loginMsz = "@ViewBag.Massege";
+        document.addEventListener("DOMContentLoaded", function () {
+            if (loginMsz != "") {
+                document.getElementById("liginMsz").innerHTML = loginMsz;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    @using (Html.BeginForm("Login", "Auth", FormMethod.Post))
+    {
+        <div style="position: absolute; top: 150px;left: 0px; right: 0px; width: 350px; height: 250px; margin: auto;">
+
+
+            <div class="card" style="background: #67deea; width: 350px; height: 350px; margin: auto; " >
+                <div class="card-header" style="text-align:center;background:#5bff64;color:black ">
+                <strong>Total Inventory! </strong>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <label>Name</label>
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", id = "txtUserName" })
+
+                    </div>
+
+                    <div>
+                       
+                        <label>Password</label>
+                        @Html.TextBoxFor(m => m.UserPassword, new { @class = "form-control", id = "txtUserPassword" })
+
+
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-primary" value="Log Out" style="margin:5px; width:100%;max-width:100%;" />
+                    </div>
+                    <div >
+                        <p id="liginMsz"  ></p>
+                    </div>
+                    
+                </div>
+                <div class="card-footer text-muted">
+                   
+                </div>
+            </div>
+
+        </div>
+    }
+</body>
+</html>
